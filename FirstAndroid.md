@@ -26,7 +26,25 @@
      由不可见变为可见时调用
     - onResume
       准备好与用户进行交互时调用，此时的活动一定位于返回栈的顶部，并且处于运行状态
-     - 
-
-
+    - onPause
+      系统准备去启动或者恢复另一个活动的时候调用。
+ - onStop
+   在活动不可见时调用
+   - onDestory
+   活动被销毁之前调用，从活动栈中把活动移除
+   - onRestart
+   由停止状态变为运行状态之前调用
+- 活动的启动模式
+共有四种，standard, singleTop, singleTask, singleInstance，通过在AnroidManifest.xml中通过标签指定android:launchMode属性来选择启动模式。
+	- standard
+	  ActivityA----->activityA------>activityA
+	- singleTop
+	   使用singleTop模式可以很好地解决重复创建栈顶活动的问题，如果活动没有存于栈中则由系统来创建。
+	  - ActivityA
+	 - ActivityA->ActivityB->ActivityA->ActivityB
+	- singleTask
+          在活动栈中只存在活动的一个实例。当活动的启动模式为singleTask时，每次启动该活动时系统首先会在返回栈中检查是否存在该活动的实例，如果存在就使用此实例，并把在此实例之上的活动全部出栈(调用onDestroy).
+   - singleInstance
+   存在单独的返回栈管理活动，不管是哪个应用来访问这个活动，都共用同一个返回栈，也就解决了共享活动实例的问题。
+   
 > Written with [StackEdit](https://stackedit.io/).
