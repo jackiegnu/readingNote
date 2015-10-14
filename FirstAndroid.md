@@ -47,4 +47,13 @@
    - singleInstance
    存在单独的返回栈管理活动，不管是哪个应用来访问这个活动，都共用同一个返回栈，也就解决了共享活动实例的问题。
    
-> Written with [StackEdit](https://stackedit.io/).
+##Memory Items
+
+    VSS - Virtual Set Size 虚拟耗用内存（包含共享库占用的内存）
+    RSS - Resident Set Size 实际使用物理内存（包含共享库占用的内存）
+    PSS - Proportional Set Size 实际使用的物理内存（比例分配共享库占用的内存）
+    USS - Unique Set Size 进程独自占用的物理内存（不包含共享库占用的内存）
+    一般来说内存占用大小有如下规律：VSS >= RSS >= PSS >= USS
+    
+
+ Written with [StackEdit](https://stackedit.io/).
