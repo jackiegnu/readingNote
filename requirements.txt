@@ -1,0 +1,4 @@
+# package need to be installed for compiling
+
+sudo apt install texlive-xetex
+sudo apt install texlive-latex-recommended

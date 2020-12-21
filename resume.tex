@@ -1,0 +1,181 @@
+\documentclass{article}
+
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage[margin=1.25in]{geometry}
+%\usepackage{fullpage}
+\usepackage{anysize}
+\usepackage{url}
+
+\marginsize{1in}{.25in}{.25in}{.25in}
+
+\titleformat{\section}[frame]
+{\huge}
+{}
+{0.25em}
+{\filcenter\bfseries}
+
+\titleformat{\subsection}
+{\bfseries\Large}
+{}
+{0em}
+{\hspace{-.25in}$\bullet$}
+
+\titleformat{\subsubsection}[runin]
+{\bfseries}
+{}
+{0em}
+{}[---]
+
+\titlespacing{\subsubsection}
+{0em}{0.25em}{1em}
+
+\renewcommand{\maketitle}{
+\begin{center}
+
+{\huge\bfseries\theauthor}
+
+\vspace{.25em}
+qujianhua2005@126.com --- \url {https://github.com/jackiegnu}
+
+\vspace{.25em}
+\thedate
+
+\end{center}
+}
+
+\pagestyle{plain}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\title {R\'esum\'e}
+\author {Jianhua Qu}
+\date{\today}
+
+\maketitle
+
+\section{Technical skills}
+
+\subsection{Work flow}
+    Vim, for networked devices, ssh and either git, rsync or syncting depending on the need.
+
+\subsection{Languages}
+
+\subsubsection{Programming}
+C, C++, Java, ARM-Asm
+
+\subsubsection{Scripting}
+Python, Bash, CMake, Makefile, SQL
+
+\subsubsection{Markup}
+HTML, CSS, Markdown
+
+\subsection{My Special}
+
+\subsubsection {Common skills}
+Linux coding; socket programming; C/C++ programming
+
+\subsubsection {TEE skills}\footnote {TEE: Trusted Execution Enviornment}
+ARM Trustzone knowledge; Secure OS development experience;
+
+\subsubsection{Android skills}
+Android Application/Framework development experience;
+
+\subsection{Something Learned by Myself just for fun}
+\subsubsection {Database}
+MySQL, Redis, MangoDB
+
+\subsubsection {Virtual Machine Tech}
+lxc, docker, kubernetes, AWS EC2(with testing account for free), Aliyun(with my own account)
+
+\section{General skills}
+\subsection{Languages}
+
+\subsubsection{can speak}
+Chinese, English, Korean
+
+\subsubsection{can read}
+Chinese, English
+
+\section{Job Experience}
+\subsection{March 2008\~{}Present, Samsung}
+
+\subsubsection{Jan 2014\~{}Present}
+\textbf{Beijing Samsung Communications Technology Research Co.,Ltd}
+
+Back to Beijing China from Korea, I led two projects, and, I am responsible for 2 applications design, architecture and development.
+
+\begin{itemize}
+\item{\textbf{passwordless payment feature---}}
+I led second project on which I was a mainly developer, too.
+
+Alipay and WeChat are the giant android application in China.
+To support Alipay and Wechat using biometrics such as fingerprint to do passwordless payment,
+I develop a middleware to support Alipay and WeChat using biometrics technology on Samsung devices.
+Also, I use TEE technology to persist user sensitive data and RSA key-pair.
+
+The architecture of this feature consists of Android AIDL interface, Android Service, Linux daemon, CA\footnote{CA:Client Application} library
+and TA\footnote{TA: Trusted Application}.
+
+Those features run in 3 chipset vendor: Qualcomm, Samsung Exynos and MediaTek;
+
+There are 2 passwordless payment stardards from Alipay and Tencent respectively as below:
+
+\begin{itemize}
+\item[1]{IIFAA}\footnote{IFAA: \url{http://ifaa.org.cn/}}
+(International Internet Finance Authentication Alliance)
+
+\item[2]{SOTER}\footnote{SOTER github: \url{https://github.com/Tencent/soter}}
+is a biometric standard as well as a platform held by Tencent.
+\end{itemize}
+
+\item{\textbf{GlobalRoaming}}
+This was the first project I led, and as a main role of design and development.
+
+It commercialized on Samsung devices since 2015, now, it has been transfer to another team;
+This application would be used when users go abroad to access the local data service from local telecom vendor.
+We saved IMSI profile data from telecom vendor into TEE side, as well, I implemented USIM related specifications of 3GPP to communicate to MS.
+During this project, I refered to or implemented ISO7816-4, ETSI TS 131-102/121, ETSI TS 135 208.
+
+Also, I used cryptography alogrithm, such as RSA, AES, to exchange cipher key and encrypt/decrypt data/cipher.
+
+Those features run in 3 chipset vendor: Qualcomm, Samsung Exynos and MediaTek;
+
+\end{itemize}
+
+\subsubsection{Jan 2012\~{}Dec 2013}
+\textbf{Samsung electronics Korea Headquarter}
+
+Joined the Global Mobility to move to Headquarter in Suwon Korea;
+
+\begin{itemize}
+    \item{}During this two years working in Korea, worked with Korean colleague to develop \textbf{Secure OS}\footnote{Secure OS: works in the secure mode of ARM with trustzone supported} based on Samsung Chipset Exynos.
+This was my first time known about TEE(Trusted Execution Envirnment).
+And, we complied with GlobalPlatform {\footnote {GlobalPlatform: https://globalplatform.org/}} specification to implement Secure OS.
+
+\end{itemize}
+
+\subsubsection{March 2008\~{}Dec 2012}
+\textbf{Beijing Samsung Communications Technology Research Co.,Ltd}
+
+\begin{itemize}
+\item{Android Application developer} since 2010
+\item{SAP(Samsung Application Platform) Application developer}, this was deprecated feature phone platform
+\end{itemize}
+
+\subsection{July 2006\~{}March 2008}
+\subsubsection{TechFaith (NASDAQ: CNTF)}
+Linux driver developer
+
+\section{Education}
+
+\subsection{M.A(Mechanical Manufacture and Automation Major)}
+\subsubsection{September 2003\~{}July 2006}
+China Agricultrue Univerity(\url{https://www.cau.edu.cn/})
+
+\subsection{B.A(Mechanical Design Manufacture and Automation Major)}
+\subsubsection{September 1999\~{}July 2003}
+HeBei Agricultrue Univerity(\url{http://www.hebau.edu.cn/})
+
+\end{document}
