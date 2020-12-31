@@ -2,4 +2,7 @@
 
 xelatex resume.tex
 
-cp -rvf resume.pdf ~/out/
+if [ $? == 0 ]
+then
+    cp -rvf resume.pdf ~/out/
+fi
