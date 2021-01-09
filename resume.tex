@@ -7,7 +7,8 @@
 \usepackage{anysize}
 \usepackage{url}
 
-\marginsize{1in}{.25in}{.25in}{.25in}
+% \marginsize{1in}{.25in}{.25in}{.25in}
+\marginsize{1in}{1in}{.25in}{.25in}
 
 \titleformat{\section}[frame]
 {\huge}
@@ -36,10 +37,16 @@
 {\huge\bfseries\theauthor}
 
 \vspace{.25em}
-qujianhua2005@126.com --- \url {https://github.com/jackiegnu}
+qujianhua2005@126.com
 
 \vspace{.25em}
-\thedate
+\url {http://59.110.160.106:8081/resume.pdf}
+
+\vspace{.25em}
+Chinese, Male, born in Dec.1979, Married, 15 years work experience
+
+\vspace{.25em}
+Upadate by \thedate
 
 \end{center}
 }
@@ -68,19 +75,14 @@ git, svn
 openssl, I used its toolkit a lot in my work such as keypair generation,
         encyption/decryption, digest, signing and so forth
 
+\subsubsection{shell}
+zsh, bash - I am using .oh-my-zsh a lot
+
 \subsubsection{Misc}
 screen, tmux, fzf, etc;
 Those help me work efficiently
 
-\subsubsection{Iot related stuff}
-\begin{itemize}
-\item[1] Iot system: samsung things
-\item[2] Protocol: Coap, 6LoWPANs:
-
-
-\end{itemize}
-
-\subsection{Languages}
+\subsection{Programming Languages}
 
 \subsubsection{Programming}
 C, C++, Java, Golang, ARM-Asm
@@ -88,15 +90,12 @@ C, C++, Java, Golang, ARM-Asm
 \subsubsection{Scripting}
 Python, Bash, CMake, Makefile, SQL
 
-\subsubsection{Markup}
-HTML, CSS, Markdown
-
 \subsection{My Special}
 
 \subsubsection {Common skills}
-Linux coding; socket programming; C/C++ programming
+Linux coding; Socket programming; C/C++ programming; Desgin Pattern
 
-\subsubsection {TEE skills}\footnote {TEE: Trusted Execution Enviornment}
+\subsubsection {TEE skills} \footnote{TEE: Trusted Execution Enviornment}
 ARM Trustzone knowledge; Secure OS development experience;
 
 \subsubsection {Android skills}
@@ -109,33 +108,35 @@ MySQL, Redis, MangoDB
 \subsubsection {Cloud}
 docker, kubernetes, AWS EC2(with testing account for free), Aliyun(with my own account)
 
-\section{General skills}
-\subsection{Languages}
+\subsubsection{Iot related stuff}
+\begin{itemize}
+\item[1] Iot system: samsung things
+\item[2] Protocol: Coap, 6LoWPANs:
+\end{itemize}
 
-\subsubsection{can speak and listen}
-Chinese, English, Korean
-
-\subsubsection{can read and write}
-Chinese, English
 
 \section{Job Experience}
-\subsection{March 2008\~{}Present, Samsung}
+\subsection{March 2008\~{} December 2020, Samsung Electronics}
 
-\subsubsection{Jan 2014\~{}Present}
+\subsubsection{January 2014\~{}December 2020}
 \textbf{Beijing Samsung Communications Technology Research Co.,Ltd}
 
 Back to Beijing China from Korea, I led two projects, and, I am responsible for 2 applications design, architecture and development.
 
 \begin{itemize}
 \item{\textbf{passwordless payment feature---}}
-I led second project on which I was a mainly developer, too.
+
+I led the second project on which I was a mainly developer, too.
+
+This feature has been implemented by 2 middlewares to support both Alipay and Wechat Payment separately, since they are not compatible.
+Those 2 middlewares are running only on Samsung Android devices.
 
 Alipay and WeChat are the giant android application in China.
 To support Alipay and Wechat using biometrics such as fingerprint to do passwordless payment,
-I develop a middleware to support Alipay and WeChat using biometrics technology on Samsung devices.
+I develop those middlewares to support Alipay and WeChat using biometrics technology on Samsung devices.
 Also, I use TEE technology to persist user sensitive data and RSA key-pair.
 
-The architecture of this feature consists of Android AIDL interface, Android Service, Linux daemon, CA\footnote{CA:Client Application} library
+The architecture of this feature consists of Android AIDL interface, Android Service, Android HIDL interface, Linux service daemon, CA\footnote{CA:Client Application} library
 and TA\footnote{TA: Trusted Application}.
 
 Those features run in 3 chipset vendors: Qualcomm, Samsung Exynos and MediaTek;
@@ -151,23 +152,27 @@ is a biometric standard as well as a platform held by Tencent.
 \end{itemize}
 
 \item{\textbf{GlobalRoaming}}
-This was the first project I led, and as a main role of design and development.
+GlobalRoaming is a complex Android application which includes user interface logic, Service provider, SoftSIM logic, Middleware between Modem and Applicaton Processor, Modem RIL, Modem Program etc.
 
-It commercialized on Samsung devices since 2015, now, it has been transfer to another team;
+This is the first project I led, and as a main role of design and development.
+
 This application would be used when users go abroad to access the local data service from local telecom vendor.
-We saved IMSI profile data from telecom vendor into TEE side, as well, I implemented USIM related specifications of 3GPP to communicate to MS.
-During this project, I refered to or implemented ISO7816-4, ETSI TS 131-102/121, ETSI TS 135 208.
+IMSI profile data from telecom vendor are stored into TEE side for security reason, and implemented USIM related specifications of 3GPP to complete communicate to BSS.
+During this project, I refered to and implemented ISO7816-4, ETSI TS 131-102/121, ETSI TS 135 208.
 
 Also, I used cryptography alogrithm, such as RSA, AES, to exchange cipher key and encrypt/decrypt data/cipher.
 
 Those features run in 3 chipset vendor: Qualcomm, Samsung Exynos and MediaTek;
 
+It has been commercialized on Samsung devices since 2015, it was transfered to another subsidiary of Samsung;
+
+
 \end{itemize}
 
-\subsubsection{Jan 2012\~{}Dec 2013}
+\subsubsection{January 2012\~{}January 2014}
 \textbf{Samsung electronics Korea Headquarter}
 
-Joined the Global Mobility to move to Headquarter in Suwon Korea;
+Joined the Global Mobility Program to move to Headquarter for working in Suwon Korea;
 
 \begin{itemize}
 \item{}During this two years working in Korea, worked with Korean colleague to develop
@@ -175,28 +180,62 @@ Joined the Global Mobility to move to Headquarter in Suwon Korea;
 This was my first time known about TEE(Trusted Execution Envirnment).
 And, we conform with GlobalPlatform {\footnote {GlobalPlatform: https://globalplatform.org/}} specification to implement Secure OS.
 
+I was responsible for Device Driver model development for secure OS. And, I designed and implemented secure LCD evaluation application. For that, I shared the quarter best employee award with my colleague.
+
 \end{itemize}
 
-\subsubsection{March 2008\~{}Dec 2012}
+\subsubsection{March 2008\~{}January 2012}
 \textbf{Beijing Samsung Communications Technology Research Co.,Ltd}
 
 \begin{itemize}
 \item{Android Application developer} since 2010
-\item{SAP(Samsung Application Platform) Application developer}, this was deprecated feature phone platform
+I was a developer and maintainer of Android applicaton of MusicPlayer;
+
+\item{SAP(Samsung Application Platform) Application developer}, this was deprecated feature phone platform.
 \end{itemize}
 
-\subsection{July 2006\~{}March 2008}
-\subsubsection{TechFaith (NASDAQ: CNTF)}
+\subsection{July 2006\~{}March 2008, TechFaith (NASDAQ: CNTF)}
 Linux driver developer
+\begin{itemize}
+\item{Linux device driver engineer}
+
+\item{Board bring up developer}
+
+\end{itemize}
+
+\section{Languages}
+
+\subsection{can speak and listen}
+Chinese, English, Korean
+
+\subsection{can read and write}
+Chinese, English
+
 
 \section{Education}
 
-\subsection{M.A(Mechanical Manufacture and Automation Major)}
+\subsection{Master Degree(Mechanical Manufacture and Automation Major)}
 \subsubsection{September 2003\~{}July 2006}
 China Agricultrue Univerity(\url{https://www.cau.edu.cn/})
 
-\subsection{B.A(Mechanical Design Manufacture and Automation Major)}
+\subsection{Bachelor Degree(Mechanical Design Manufacture and Automation Major)}
 \subsubsection{September 1999\~{}July 2003}
 HeBei Agricultrue Univerity(\url{http://www.hebau.edu.cn/})
 
+% \section{Hobbies \& Interests}
+% \subsection{Activities}
+% \begin{itemize}
+% \item{I love playing table tenis and badminton with my famliy and friends}
+% \item{I enjoy the leisure time to play video game with my son}
+% \end{itemize}
+
+\section{ Self Introduction}
+\begin{itemize}
+\item{I am going to move to Sweden for family reunion on January 17, 2021 from Beijing China.}
+\item{I am job hunting now, since I just quit my job from Samsung Electronics(\textit{Beijing China}) where I had been working for 13 years.}
+
+\item{My favorite job is to be a programmer, I like to learn new technical skills and to accept new chchallenges which could offer me new opportunities.}
+
+\item{It is nice to spend some quality time with my family; playing video game is one of our favorite activities. We also love sport activities such as playing table-tennis, hiking, jogging etc.}
+\end{itemize}
 \end{document}
