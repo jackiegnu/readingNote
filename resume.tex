@@ -2,6 +2,9 @@
 
 \usepackage{titlesec}
 \usepackage{titling}
+% \usepackage{siunitx}
+\usepackage{amssymb}
+
 \usepackage[margin=1.25in]{geometry}
 %\usepackage{fullpage}
 \usepackage{anysize}
@@ -73,7 +76,7 @@ git, svn
 
 \subsubsection{Cryptography}
 openssl, I used its toolkit a lot in my work such as keypair generation,
-        encryption/decryption, digest, signing and so forth
+        encryption/decryption, digest, signing, and so forth
 
 \subsubsection{shell}
 zsh, bash - I am using .oh-my-zsh a lot
@@ -95,8 +98,8 @@ Python, Bash, CMake, Makefile, SQL
 \subsubsection {Common skills}
 Linux coding; Socket programming; C/C++ programming; Design Pattern
 
-\subsubsection {TEE skills} \footnote{TEE: Trusted Execution Enviornment}
-ARM Trustzone knowledge; Secure OS development experience;
+\subsubsection {TEE skills} \footnote{TEE: Trusted Execution Environment}
+ARM TrustZone\circledR{} knowledge; Secure OS development experience;
 
 \subsubsection {Android skills}
 Android Application/Framework development experience;
@@ -106,12 +109,12 @@ Android Application/Framework development experience;
 MySQL, Redis, MongoDB
 
 \subsubsection {Cloud}
-docker, kubernetes, AWS EC2(with testing account for free), Aliyun(with my own account)
+docker, Kubernetes, AWS EC2(with testing account for free), Aliyun(with my own account)
 
 \subsubsection{Iot related stuff}
 \begin{itemize}
 \item[1] Iot system: Samsung things
-\item[2] Protocol: Coap, 6LoWPANs:
+\item[2] Protocol: Coap
 \end{itemize}
 
 
@@ -121,23 +124,22 @@ docker, kubernetes, AWS EC2(with testing account for free), Aliyun(with my own a
 \subsubsection{January 2014\~{}December 2020}
 \textbf{Beijing Samsung Communications Technology Research Co., Ltd}
 
-Back to Beijing China from Korea, I led two projects, and, I am responsible for 2 applications design, architecture and development.
+Back to Beijing China from Korea, I led two projects, and, I am responsible for 2 applications design, architecture, and development.
 
 \begin{itemize}
 \item{\textbf{passwordless payment feature---}}
 
-I led the second project on which I was a main developer, too.
+I led the second project on which I was the main developer, too.
 
-This feature has been implemented by 2 middlewares to support both Alipay and Wechat Payment separately since they are not compatible.
+This feature has been implemented by 2 middlewares to support both Alipay and WeChat Payment separately since they are not compatible.
 Those 2 middlewares are running only on Samsung Android devices.
 
 Alipay and WeChat are the giant android application in China.
-To support Alipay and Wechat using biometrics such as fingerprint to do passwordless payment,
+To support Alipay and Wechat using biometrics such as a fingerprint to do the passwordless payment,
 I develop those middlewares to support Alipay and WeChat using biometrics technology on Samsung devices.
 Also, I use TEE technology to persist user sensitive data and RSA key-pair.
 
-The architecture of this feature consists of Android AIDL interface, Android Service, Android HIDL interface, Linux service daemon, CA\footnote{CA:Client Application} library
-and TA\footnote{TA: Trusted Application}.
+The architecture of this feature consists of the Android AIDL interface, Android Service, Android HIDL interface, Linux service daemon, CA\footnote{CA: Client Application} library, and TA\footnote{TA: Trusted Application}.
 
 Those features run in 3 chipset vendors: Qualcomm, Samsung Exynos, and MediaTek;
 
@@ -152,19 +154,19 @@ is a biometric standard as well as a platform held by Tencent.
 \end{itemize}
 
 \item{\textbf{GlobalRoaming}}
-GlobalRoaming is a complex Android application which includes user interface logic, Service provider, SoftSIM logic, Middleware between Modem and Application Processor, Modem RIL, Modem Program, etc.
+GlobalRoaming is a complex Android application that includes a user interface logic, Service provider, SoftSIM logic, Middleware between Modem and Application Processor, Modem RIL, Modem Program, etc.
 
-This is the first project I led, and as a main role of design and development.
+This is the first project I led, and as the main role of design and development.
 
 This application would be used when users go abroad to access the local data service from a local telecom vendor.
-IMSI profile data from telecom vendors are stored into TEE side for security reasons and implemented USIM related specifications of 3GPP to complete communicate to BSS.
-During this project, I refered to and implemented ISO7816-4, ETSI TS 131-102/121, ETSI TS 135 208.
+IMSI profile data from telecom vendors are stored into the TEE side for security reasons and implemented USIM related specifications of 3GPP to complete communication to BSS.
+During this project, I referred to and implemented ISO7816-4, ETSI TS 131-102/121, ETSI TS 135 208.
 
 Also, I used cryptography algorithms, such as RSA, AES, to exchange cipher key and encrypt/decrypt data/cipher.
 
 Those features run in 3 chipset vendor: Qualcomm, Samsung Exynos, and MediaTek;
 
-It has been commercialized on Samsung devices since 2015, it was transfered to another subsidiary of Samsung;
+It has been commercialized on Samsung devices since 2015, it was transferred to another subsidiary of Samsung;
 
 
 \end{itemize}
@@ -175,12 +177,12 @@ It has been commercialized on Samsung devices since 2015, it was transfered to a
 Joined the Global Mobility Program to move to Headquarter for working in Suwon Korea;
 
 \begin{itemize}
-\item{}During this two years working in Korea, worked with Korean colleague to develop
+\item{}During those two years working in Korea, worked with Korean colleague to develop
 \textbf{Secure OS}\footnote{Secure OS: works in the secure mode of ARM with trustzone supported} based on Samsung Chipset Exynos.
 This was my first time known about TEE(Trusted Execution Environment).
 And, we conform with GlobalPlatform {\footnote {GlobalPlatform: https://globalplatform.org/}} specification to implement Secure OS.
 
-I was responsible for Device Driver's model development for secure OS. And, I designed and implemented a secure LCD evaluation application. Because of that, I shared the quarter best employee award with my colleague.
+I was responsible for Device Driver's model development for a secure OS. And, I designed and implemented a secure LCD evaluation application. Because of that, I shared the quarter best employee award with my colleague.
 
 \end{itemize}
 
@@ -189,17 +191,22 @@ I was responsible for Device Driver's model development for secure OS. And, I de
 
 \begin{itemize}
 \item{Android Application developer} since 2010
-I was a developer and maintainer of Android applicaton of MusicPlayer;
+I was a developer and maintainer of Android application of MusicPlayer;
 
-\item{SAP(Samsung Application Platform) Application developer}, this was deprecated feature phone platform.
+\item{SAP(Samsung Application Platform) Application developer}, this was a deprecated feature phone platform.
 \end{itemize}
 
 \subsection{July 2006\~{}March 2008, TechFaith (NASDAQ: CNTF)}
-Linux driver developer
+\subsubsection{Linux driver developer} Worked in TechFaith
+
 \begin{itemize}
 \item{Linux device driver engineer}
 
-\item{Board bring up developer}
+I used to be a device driver engineer. My task was to develop device drivers for Linux mobile phones, such as LCD driver, Camera driver, FM driver, and so on. The application processors we always used were PXA270 and PXA310 delivered by Intel, now it belongs to Marvell.
+
+\item{Board bring-up developer}
+
+Also, used to be a board bring-up developer, at that time, blob or uboot was a loader to boot the Linux kernel. My routine was that update a bootloader according to hardware design to load the Linux kernel.
 
 \end{itemize}
 
@@ -216,11 +223,11 @@ Chinese, English
 
 \subsection{Master Degree(Mechanical Manufacture and Automation Major)}
 \subsubsection{September 2003\~{}July 2006}
-China Agriculture Univerity(\url{https://www.cau.edu.cn/})
+China Agriculture University(\url{https://www.cau.edu.cn/})
 
 \subsection{Bachelor Degree(Mechanical Design Manufacture and Automation Major)}
 \subsubsection{September 1999\~{}July 2003}
-HeBei Agriculture Uiverity(\url{http://www.hebau.edu.cn/})
+HeBei Agriculture University(\url{http://www.hebau.edu.cn/})
 
 % \section{Hobbies \& Interests}
 % \subsection{Activities}
@@ -231,11 +238,11 @@ HeBei Agriculture Uiverity(\url{http://www.hebau.edu.cn/})
 
 \section{ Self Introduction}
 \begin{itemize}
-\item{My family and I are living in Stockholm Sweden}
+\item{My family and I are living in Stockholm Sweden now}
 \item{I am job hunting now since I just quit my job from Samsung Electronics(\textit{Beijing China}) where I had been working for 12 years.}
 
 \item{My favorite job is to be a programmer, I like to learn new technical skills and to accept new challenges that could offer me new opportunities.}
 
-\item{It is nice to spend some quality time with my family; playing video games is one of our favorite activities. We also love sport activities such as playing table-tennis, hiking, jogging etc.}
+\item{It is nice to spend some quality time with my family; playing video games is one of our favorite activities. We also love sports activities such as playing table-tennis, hiking, jogging, etc.}
 \end{itemize}
 \end{document}
